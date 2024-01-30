@@ -1,3 +1,5 @@
+#this is a testing file you can check but don't take it seriously
+
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -13,7 +15,7 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory = "static"), name = "static")
 templates = Jinja2Templates(directory = "templates")
 
-conn = MongoClient("mongodb+srv://sayak-0012:1234@sayakghosh.lhh4cof.mongodb.net") #mongodb instense
+conn = MongoClient("******************") #mongodb instense
 
 
 
