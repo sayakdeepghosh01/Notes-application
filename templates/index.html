@@ -72,29 +72,36 @@
         </div>
       </div>
     </nav>
+
+    <!--the form templete -->
     <div class = "container">
         <h1>Add your notes here</h1>
-    <form method = "post">
+    <form action="/" method = "post">
         <div class="mb-3">
             <label for="title" class="form-label">Note Title</label>
-            <input type="text" class="form-control" id="title" placeholder="Machine Learning Notes">
+            <input type="text" class="form-control" name="title" placeholder="Machine Learning Notes">
           </div>
           <div class="mb-3">
             <label for="desc" class="form-label">Note Desciption</label>
-            <input type="text" class="form-control" id="desc" placeholder="Machine learning is a branch of artificial intelligence (AI)">
+            <input type="text" class="form-control" name="desc" placeholder="Machine learning is a branch of artificial intelligence (AI)">
           </div>
 
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" name = "important" id = "exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Important</label>
           </div>
           <button type ="submit" class ="btn-primary" style="background-color:#87ceeb">Submit</button>
         </form>
     </div>
-
+<!--here output with Jinja2 -->
     <div class = "contaiiner">
         <h2>Your Notes</h2>
         
+        {%if newDocs is defined %}
+        No Notes to Display
+        {% endif %}
+
         {% for item in newDocs %}
         <div>
         {{ item.note }}
