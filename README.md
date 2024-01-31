@@ -1,5 +1,5 @@
 # 📝 Notes Uploading Application
-
+![Image One](one.png)
 This repository contains a Python application 🐍 built with FastAPI, MongoDB, HTML, and CSS, enabling users to upload and manage their notes.
 
 ## Functionalities 🚀
@@ -54,3 +54,5 @@ uvicorn index:app --reload
 - Explore the functionality and manage your notes.
 - Thank you for your interest!
 
+![Image Two](two.png)
+![Image Three](three.png)
